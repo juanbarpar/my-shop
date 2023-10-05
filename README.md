@@ -1,4 +1,4 @@
-#Juan Camilo Barrera
+By Juan Camilo Barrera
 
 # Getting Started with Create React App
 
