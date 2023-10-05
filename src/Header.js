@@ -1,29 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import { Link, useLocation } from "react-router-dom";
 import './Header.css';
 
 const Header = ({ categories, selectedCategory, setSelectedCategory }) => {
-
-
-  const [user, setUser] = useState(null);
-
-  useEffect(() => {
-    fetch('https://jsonplaceholder.typicode.com/users/4')
-      .then(response => response.json())
-      .then(data => setUser(data))
-      .catch(error => console.error('Error fetching user data:', error));
-  }, []);
-
-  if (!user) {
-    return null; 
-  }
-
-  const initials = user.name
-    .split(' ')
-    .map(word => word.charAt(0).toUpperCase())
-    .join('');
-
-
-
+  const location = useLocation();
 
   const handleCategoryChange = (e) => {
     setSelectedCategory(e.target.value);
@@ -31,7 +11,12 @@ const Header = ({ categories, selectedCategory, setSelectedCategory }) => {
 
   return (
     <div className="header">
-      
+
+    <div className="navigation">
+    <Link to="/" className={`nav-link ${location.pathname === '/' ? 'active' : ''}`}>Inicio</Link>
+    <Link to="/cart" className={`nav-link ${location.pathname === '/cart' ? 'active' : ''}`}>Carrito</Link>
+  </div>
+  
       <div className="category-filter">
         <label htmlFor="category">Filtrar por categoría:</label>
         <select
@@ -45,14 +30,15 @@ const Header = ({ categories, selectedCategory, setSelectedCategory }) => {
             </option>
           ))}
         </select>
-
       </div>
-      <div className="user-circle">{initials}</div>
+
+
     </div>
   );
 }
 
 export default Header;
+
 
 
 

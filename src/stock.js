@@ -51,6 +51,3 @@ function Stock({ products, selectedCategory }) {
 }
 
 export default Stock;
-
-
-
