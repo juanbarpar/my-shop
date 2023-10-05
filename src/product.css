@@ -29,7 +29,7 @@
     color: #666;
   }
   
-  .product-container a {
+  .product-container a, button {
     display: inline-block;
     margin-top: 20px;
     padding: 10px 20px;
