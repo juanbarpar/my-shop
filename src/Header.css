@@ -1,0 +1,44 @@
+/* Header.css */
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Alinea el contenido a la izquierda */
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .user-circle {
+    background-color: #fff;
+    color: #007bff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    margin-right: 20px;
+  }
+  
+  .category-filter {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Empuja el filtro a la izquierda */
+  }
+  
+  label {
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #fff;
+  }
+  
+  select {
+    padding: 5px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+  }
+  
